@@ -1,1 +1,19 @@
-<h1>Hello World</h1>
+<body>
+    <div class="login">
+        <h2>House Price Prediction</h2>
+        <form action="{{ url_for('predict') }}" method="post">
+            <input type="text" name="MedInc" placeholder="Median Income">
+            <input type="text" name="HouseAge" placeholder="House Age">
+            <input type="text" name="AveRooms" placeholder="Average Rooms">
+            <input type="text" name="AveBedrms" placeholder="Average Bedrooms">
+            <input type="text" name="Population" placeholder="Population">
+            <input type="text" name="AveOccup" placeholder="Average Occupancy">
+            <input type="text" name="Latitude" placeholder="Latitude">
+            <input type="text" name="Longitude" placeholder="Longitude">
+            <button type="submit">Predict</button>
+        </form>
+        <br>
+        <br>
+      {{ prediction_text }}  
+    </div>
+</body>
